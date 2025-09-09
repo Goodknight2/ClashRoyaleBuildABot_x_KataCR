@@ -11,6 +11,8 @@ from clashroyalebuildabot.detectors.screen_detector import ScreenDetector
 from clashroyalebuildabot.detectors.unit_detector import UnitDetector
 from clashroyalebuildabot.namespaces import State
 from error_handling import WikifiedError
+from katacr_detection.katacr_detection.detect import ComboDetector
+
 
 
 class Detector:
@@ -27,7 +29,7 @@ class Detector:
         self.card_detector = CardDetector(self.cards)
         self.number_detector = NumberDetector()
         self.unit_detector = UnitDetector(
-            os.path.join(MODELS_DIR, "units_M_480x352.onnx"), self.cards
+            ComboDetector(['katacr_detection\katacr_detection\models\detector1_v0.7.13.pt', 'katacr_detection\katacr_detection\models\detector2_v0.7.13.pt'], enable_coordinate_filtering=False)
         )
         self.screen_detector = ScreenDetector()
 

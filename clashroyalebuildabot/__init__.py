@@ -4,7 +4,6 @@ from .bot import Bot
 from .detectors import CardDetector
 from .detectors import Detector
 from .detectors import NumberDetector
-from .detectors import OnnxDetector
 from .detectors import ScreenDetector
 from .detectors import UnitDetector
 from .emulator import Emulator
