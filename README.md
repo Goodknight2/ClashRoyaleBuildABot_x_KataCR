@@ -1,5 +1,7 @@
 <div align="center">
 
+⚠️ To set up, complete the instructions below, then follow the instructions [here](https://github.com/AviSelvakumar/ClashRoyaleBuildABot_x_KataCR/blob/main/KataCRDetection.md)
+
 📌 This bot is under active development and may experience minor issues.  
 Please report any bugs on Discord, and we will fix them promptly.
 
@@ -39,7 +41,7 @@ Follow these steps to set up your environment:
 1. **Install and Configure the Emulator:** Follow our [Emulator Setup Guide](https://github.com/Pbatch/ClashRoyaleBuildABot/wiki/Emulator-Setup-Guide).
 2. **Install Python, PIP, and Git:** Go through our [Python, PIP & Git Setup Guide](https://github.com/Pbatch/ClashRoyaleBuildABot/wiki/Python,-PIP,-&-Git-Setup-Guide).
 3. **Install and Configure Your Bot:** Use our [Bot Installation Guide](https://github.com/Pbatch/ClashRoyaleBuildABot/wiki/Bot-Installation-Setup-Guide).
-
+4. **Setup KataCR Detection:** Look at the setup section [here](https://github.com/AviSelvakumar/ClashRoyaleBuildABot_x_KataCR/edit/main/KataCRDetection.md)
 Need help? Join our [Discord server](https://discord.gg/K4UfbsfcMa).
 
 ---
