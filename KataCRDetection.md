@@ -25,6 +25,8 @@ If you try to use this with the default screen dimensions, you'll quickly notice
 * 1080 x 1920
 * 576 x 1024
 
+If you are using a resolution other than 1080x2400 you need to modify the part{idx}_{ratio} in split_bbox_params in constant.py, where idx=1,2,3 represents the top-right corner time image position, the middle arena, and the bottom hand card area, respectively.
+
 **If you are having problems with the accuracy, this is the first thing I would change**
 # Setup
 To install the requirements, assuming you have already completed the set up for ClashRoyaleBuildABot, you can simply run 
@@ -49,3 +51,4 @@ To make this, I essentially took some of the code from an amazing repo called Ka
 This is probably the more significant improvement on this list. The KataCR repo mentioned earlier uses videos of Clash Royale matches to gather data. In theory, whatever format these videos are in should be the ideal format. However, I haven't been able to figure out where the videos are. I found [this dataset](https://github.com/wty-yy/Clash-Royale-Replay-Dataset) used in KataCR, but it doesn't look like videos. The readme has a [section](https://github.com/wty-yy/KataCR/blob/master/README_en.md#model-verification) where he includes a note on the screen dimensions he used, but when I tested that it didn't work well. 
 
 There also is an issue with filtering out unreasonable results (negative tile positions, ect.) but I have chosen not to include that here as that seems like a broader fix for ClashRoyaleBuildABot that should be brought up in the main repo.
+
