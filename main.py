@@ -7,14 +7,15 @@ try:
     from loguru import logger
     from PyQt6.QtWidgets import QApplication
 
-    from clashroyalebuildabot.actions import ArchersAction
-    from clashroyalebuildabot.actions import BabyDragonAction
     from clashroyalebuildabot.actions import CannonAction
-    from clashroyalebuildabot.actions import GoblinBarrelAction
+    from clashroyalebuildabot.actions.spear_goblins_action import SpearGoblinsAction
+    from clashroyalebuildabot.actions.valkyrie_action import ValkyrieAction
+    from clashroyalebuildabot.actions import BabyDragonAction
     from clashroyalebuildabot.actions import KnightAction
     from clashroyalebuildabot.actions import MinipekkaAction
     from clashroyalebuildabot.actions import MusketeerAction
-    from clashroyalebuildabot.actions import WitchAction
+    from clashroyalebuildabot.actions.barbarians_action import BarbariansAction
+    from clashroyalebuildabot.actions import FireballAction
     from clashroyalebuildabot.gui.main_window import MainWindow
     from clashroyalebuildabot.gui.utils import load_config
     from clashroyalebuildabot.utils.git_utils import check_and_pull_updates
@@ -26,15 +27,19 @@ except Exception as e:
 def main():
     check_and_pull_updates()
     actions = [
-        ArchersAction,
-        GoblinBarrelAction,
-        BabyDragonAction,
         CannonAction,
+        BabyDragonAction,
+        SpearGoblinsAction,
+        ValkyrieAction,
         KnightAction,
         MinipekkaAction,
         MusketeerAction,
-        WitchAction,
+        BarbariansAction,
+       
     ]
+
+    # Don't forget to activate venv b4 running
+    # crbab-venv\Scripts\Activate.ps1
     try:
         config = load_config()
 
