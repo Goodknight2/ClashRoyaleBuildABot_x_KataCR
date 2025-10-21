@@ -1,4 +1,5 @@
-from ultralytics.utils.plotting import threaded, np, torch, math, cv2, Annotator, Path, ops, colors, contextlib
+import contextlib
+from ultralytics.utils.plotting import threaded, np, torch, math, cv2, Annotator, Path, ops, colors
 @threaded
 def plot_images(
     images,
@@ -89,8 +90,9 @@ def plot_images(
     annotator.im.save(fname)  # save
     if on_plot:
         on_plot(fname)
-
-from ultralytics.utils.ops import xywh2xyxy, torch, xywh2xyxy, time, nms_rotated, torchvision, LOGGER
+import torch
+import time
+from ultralytics.utils.ops import xywh2xyxy, xywh2xyxy, nms_rotated, torchvision, LOGGER
 def non_max_suppression(
   prediction,
   conf_thres=0.25,
