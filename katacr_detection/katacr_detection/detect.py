@@ -151,5 +151,5 @@ if __name__ == '__main__':
   # combo.predict("/home/yy/Videos/CR_Videos/test/test_feature_build2_sub_end.mp4", show=True, save=True, video_interval=3)
   pred = combo.predict('Screenshot_2025.09.08_17.58.41.060.png')
   for detection in pred:
-    print(f"Unit: {idx2unit[detection[6]]} Side: {"Ally" if detection[7] == 0 else "Enemy"}")
+    print(f"Unit: {idx2unit[detection[6]]} Side: { 'Ally' if detection[7] == 0 else 'Enemy' }")
   # combo.predict("/home/yy/Videos/CR_Videos/musketeer_and_hogrider_insecond.mp4", show=True, save=True, video_interval=3)
