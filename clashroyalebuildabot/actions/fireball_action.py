@@ -1,7 +1,6 @@
 from clashroyalebuildabot import Cards
-from clashroyalebuildabot.actions.generic.spell_action import SpellAction
+from clashroyalebuildabot.actions.generic.overhead_action import OverheadAction
 
 
-class FireballAction(SpellAction):
+class FireballAction(OverheadAction):
     CARD = Cards.FIREBALL
-    RADIUS = 2.5

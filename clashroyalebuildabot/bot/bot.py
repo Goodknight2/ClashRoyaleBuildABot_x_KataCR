@@ -180,7 +180,12 @@ class Bot:
                 self.end_of_game_clicked = True
                 self._log_and_wait("Clicked END_OF_GAME screen", 2)
             return
-
+        if new_screen == Screens.BYPASS_END_OF_GAME:
+            if not self.end_of_game_clicked:
+                self.emulator.click(*self.state.screen.click_xy)
+                self.bypass_end_of_game_clicked = True
+                self._log_and_wait("Clicked BYPASS_END_OF_GAME screen", 2)
+            return
         self.end_of_game_clicked = False
 
         if self.auto_start and new_screen == Screens.LOBBY:

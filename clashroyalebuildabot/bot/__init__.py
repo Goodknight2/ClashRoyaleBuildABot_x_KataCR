@@ -1,4 +1,4 @@
-from .bot import Bot
+from clashroyalebuildabot.bot.bot import Bot
 
 __all__ = [
     "Bot",
